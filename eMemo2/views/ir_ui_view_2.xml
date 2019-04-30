@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="base.user_groups_view" model="ir.ui.view" >
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <field name="groups_id" position="replace">
+        <group col="2">
+          <separator string="User Type" colspan="2" groups="base.group_no_one"/>
+
+          <newline/>
+        </group>
+        <group col="2" >
+          <separator string="Application Accesses" colspan="2"/>
+          <field name="sel_groups_2_3"/>
+          <newline/>
+        </group>
+        <group col="4"  class="o_label_nowrap">
+          <separator string="Extra Rights" colspan="4" groups="base.group_no_one"/>
+          <field name="in_group_7" groups="base.group_no_one"/>
+          <field name="in_group_4" groups="base.group_no_one"/>
+          <field name="in_group_5" groups="base.group_no_one"/>
+          <field name="in_group_6" invisible="1" groups="base.group_no_one"/>
+          <separator string="Other" colspan="4"/>
+          <field name="in_group_8"/>
+        </group>
+      </field>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="base.view_users_form"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">res.users</field>
+    <field name="name">res.users.groups</field>
+    <field name="priority">16</field>
+    <field name="type">form</field>
+  </record>
+  <record id="default_form_view_fo_fbf47c81-aaaa-4618-8b27-45535177bbfb" model="ir.ui.view" >
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <form>
+        <header >
+        <button string="Accept" type="object" name="approv" class="oe_highlight"/>
+          <button string="Need More Info" type="object" name="moreinfo" class="oe_highlight"/>
+          <button string="Reject" type="object" name="reject" class="oe_highlight"/>
+        </header>
+
+        <sheet string="memo">
+          <div class="oe_title">
+            <h1>
+              <field name="x_name" required="1"/>
+            </h1>
+          </div>
+          <group name="studio_group_647439">
+            <group name="studio_group_647439_left"/>
+            <group name="studio_group_647439_right"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_memo</field>
+    <field name="name">Default form view for x_memo</field>
+    <field name="priority">16</field>
+    <field name="type">form</field>
+  </record>
+  <record id="odoo_studio_default__c4fa1a3f-b998-4654-8484-ecd0989d060f" model="ir.ui.view" >
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+       <!-- <xpath expr="//form[1]/sheet[1]" position="before">
+          <header>
+            <field name="x_studio_status" options="{'clickable': '1'}" widget="statusbar" string="Status"/>
+          </header>
+        </xpath>-->
+        <xpath expr="//group[@name='studio_group_647439_left']" position="inside">
+          <field name="create_uid"/>
+          <field name="x_studio_status"/>
+
+        </xpath>
+        <xpath expr="//group[@name='studio_group_647439_right']" position="inside">
+          <field name="create_date"/>
+        </xpath>
+        <xpath expr="//group[@name='studio_group_647439']" position="after">
+          <group name="studio_group_b0FzA">
+            <group name="studio_group_b0FzA_left" string="Memo Details">
+              <field name="x_studio_objective" string="Objective"/>
+              <field name="x_studio_background" string="Background"/>
+              <field name="x_studio_campaign_scenarios" string="Campaign Scenarios"/>
+              <field name="x_studio_campaign_responses" string="Campaign Responses"/>
+            </group>
+            <group name="studio_group_b0FzA_right" string="Budget Details">
+              <field name="x_currency_id"/>
+              <field name="x_studio_budget" string="Budget"/>
+              <field name="x_studio_channels" widget="many2many_tags"/>
+            </group>
+          </group>
+          <!--<group name="studio_group_z5BvB">
+            <group name="studio_group_z5BvB_left" string="Financial Assumption">
+              <field name="x_studio_financial_assumption"/>
+            </group>
+          </group>-->
+          
+          <field name="x_studio_financial_assumption"/>
+          <notebook name="studio_notebook_UxYwA">
+            <page name="studio_page_UxYwA" string="Approval">
+              <group name="studio_group_UxYwA">
+                <group name="studio_group_UxYwA_left">
+                  <field name="x_studio_submitted_by" string="Submitted By "/>
+                  <field name="x_studio_manager_approval" string="Manager Approval"/>
+                  <field name="x_studio_marketing_manager_approval" string="Marketing Manager Approval"/>
+                  <field name="x_studio_marketing_hod_approval" string="Marketing HOD Approval"/>
+                  <field name="x_studio_hod_review" string="HOD Review"/>
+                  <field name="x_studio_cdo_approval" string="CDO Approval"/>
+                  <field name="x_studio_finance_approval" string="Finance Approval"/>
+                  <field name="x_studio_hod_approval" string="HOD Approval"/>
+                  <field name="x_studio_ceo_approval" string="CEO Approval"/>
+                  <field name="x_studio_mancom_approval" string="Mancom Approval"/>
+                  <field name="x_studio_cco_approval" string="CCO Approval"/>
+                  <field name="x_studio_marketing_team" string="Marketing Team "/>
+                  <field name="x_studio_owner_1st_review" string="Owner 1st Review"/>
+                  <field name="x_studio_legal_approval" string="Legal Approval"/>
+                  <field name="x_studio_compliance_approval" string="Compliance Approval"/>
+                  <field name="x_studio_risk_approval" string="Risk Approval"/>
+                  <field name="x_studio_owner_2nd_review" string="Owner 2nd Review"/>
+                  <field name="x_studio_reject_by"/>
+                </group>
+                <group name="studio_group_UxYwA_right">
+                  <field name="x_studio_submit_date" string="Submittion"/>
+                  <field name="x_studio_manager_approval_date" string="Manager Approval"/>
+                  <field name="x_studio_marketing_manager_approval_date" string="Marketing Manager Approval"/>
+                  <field name="x_studio_marketing_hod_approval_date" string="Marketing HOD Approval"/>
+                  <field name="x_studio_hod_review_date" string="HOD Review"/>
+                  <field name="x_studio_cdo_approval_date" string="CDO Approval"/>
+                  <field name="x_studio_finance_approval_date" string="Finance Approval"/>
+                  <field name="x_studio_hod_approval_date" string="HOD Approval"/>
+                  <field name="x_studio_ceo_approval_date" string="CEO Approval"/>
+                  <field name="x_studio_mancom_approval_date" string="Mancom Approval"/>
+                  <field name="x_studio_cco_approval_date" string="CCO Approval"/>
+                  <field name="x_studio_marketing_team_date" string="Marketing Team"/>
+                  <field name="x_studio_owner_1st_review_date" string="Owner 1st Review"/>
+                  <field name="x_studio_legal_approval_date" string="Legal Approval"/>
+                  <field name="x_studio_compliance_approval_date" string="Compliance Approval"/>
+                  <field name="x_studio_risk_approval_date" string="Risk Approval"/>
+                  <field name="x_studio_owner_2nd_review_date" string="Owner 2nd Review"/>
+                  <field name="x_studio_reject_date"/>
+                </group>
+              </group>
+            </page>
+          </notebook>
+        </xpath>
+        <xpath expr="//form[1]/sheet[1]" position="after">
+          <div class="oe_chatter" name="studio_div_cdb23b">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="message_ids" widget="mail_thread"/>
+          </div>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="default_form_view_fo_fbf47c81-aaaa-4618-8b27-45535177bbfb"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">x_memo</field>
+    <field name="name">Odoo Studio: Default form view for x_memo customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record id="default_tree_view_fo_285d671a-c95f-4b30-a6d1-0b0617db09c1" model="ir.ui.view" >
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <tree string="memo">
+        <field name="x_name" modifiers="{}"/>
+      </tree>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_memo</field>
+    <field name="name">Default tree view for x_memo</field>
+    <field name="priority">16</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="default_form_view_fo_0d8be6a8-e0ff-414d-8a00-6a7ee9368fd0" model="ir.ui.view" >
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <form>
+        <sheet string="Channels">
+          <div class="oe_title">
+            <h1>
+              <field name="x_name" required="1"/>
+            </h1>
+          </div>
+          <group name="studio_group_c9392c">
+            <group name="studio_group_c9392c_left"/>
+            <group name="studio_group_c9392c_right"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_channels</field>
+    <field name="name">Default form view for x_channels</field>
+    <field name="priority">16</field>
+    <field name="type">form</field>
+  </record>
+  <record id="default_tree_view_fo_204fbb5f-afc9-47e7-acf7-7cb6e76d954f" model="ir.ui.view" >
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <tree string="Channels">
+        <field name="x_name" modifiers="{}"/>
+      </tree>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_channels</field>
+    <field name="name">Default tree view for x_channels</field>
+    <field name="priority">16</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="default_search_view__e9666511-e4e2-4984-a7e9-703353941e8c" model="ir.ui.view" >
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <search string="memo">
+        <field name="x_name" modifiers="{}"/>
+      </search>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_memo</field>
+    <field name="name">Default search view for x_memo</field>
+    <field name="priority">16</field>
+    <field name="type">search</field>
+  </record>
+  <record id="odoo_studio_default__dc4b3202-86a1-4db3-94a2-d2797196f74d" model="ir.ui.view" >
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='x_name']" position="after">
+          <group name="studio_group_by">
+            <filter context="{'group_by': 'x_studio_status'}" name="x_studio_status" string="Status"/>
+          </group>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="default_search_view__e9666511-e4e2-4984-a7e9-703353941e8c"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">x_memo</field>
+    <field name="name">Odoo Studio: Default search view for x_memo customization</field>
+    <field name="priority">99</field>
+    <field name="type">search</field>
+  </record>
+  <record id="odoo_studio_default__cb847851-7705-4cd0-9259-a0049ada1e81" model="ir.ui.view" >
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='x_name']" position="after">
+          <field name="create_uid"/>
+          <field name="create_date"/>
+          <field name="x_studio_budget"/>
+          <field name="x_studio_status"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="default_tree_view_fo_285d671a-c95f-4b30-a6d1-0b0617db09c1"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">x_memo</field>
+    <field name="name">Odoo Studio: Default tree view for x_memo customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+
+</odoo>

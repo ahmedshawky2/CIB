@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="e_memo_49811739-90b5-449a-bc9a-cf22be6e459e" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" eval="False"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">E-Memo</field>
+    <field name="parent_id" eval="False"/>
+    <field name="sequence">1</field>
+    <field name="web_icon">fa fa-briefcase,#4dd0e1,#34495e</field>
+  </record>
+  <record id="e_memo_approval_ef9e40b0-e3f1-4157-926b-b0d932b6e808" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="approval_9d1a6297-0730-4bb7-8d09-61fc00c02599"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Approval</field>
+    <field name="parent_id" ref="e_memo_49811739-90b5-449a-bc9a-cf22be6e459e"/>
+    <field name="sequence">2</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="e_memo_marketing_man_5a9c7921-7e0f-4ca2-8245-1f1895761442" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="marketing_manager_630acc6d-2555-412b-9302-158f4c27020b"/>
+    <field name="active" eval="True"/>
+    <field name="name">Marketing Manager</field>
+    <field name="parent_id" ref="e_memo_approval_ef9e40b0-e3f1-4157-926b-b0d932b6e808"/>
+    <field name="sequence">2</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="e_memo_marketing_hod_41efbc8b-f861-43cb-a0aa-ea8efb98ed0c" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="marketing_hod_46f37612-211c-4262-bc00-284751e3df7c"/>
+    <field name="active" eval="True"/>
+    <field name="name">Marketing HOD</field>
+    <field name="parent_id" ref="e_memo_approval_ef9e40b0-e3f1-4157-926b-b0d932b6e808"/>
+    <field name="sequence">3</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="e_memo_finance_4fb2676b-ac2a-4bdb-ab84-59905d650159" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="finance_13e4ff68-38b1-4efb-8018-681698f9cfc6"/>
+    <field name="active" eval="True"/>
+    <field name="name">Finance</field>
+    <field name="parent_id" ref="e_memo_approval_ef9e40b0-e3f1-4157-926b-b0d932b6e808"/>
+    <field name="sequence">7</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="e_memo_cdo_ba4fe3ac-0472-4eaa-81f4-8a14da7364bc" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="cdo_158ca431-b44b-4c1d-a8fb-e409b59533cf"/>
+    <field name="active" eval="True"/>
+    <field name="name">CDO</field>
+    <field name="parent_id" ref="e_memo_approval_ef9e40b0-e3f1-4157-926b-b0d932b6e808"/>
+    <field name="sequence">6</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="e_memo_cco_b3277e1c-4b4f-45c6-8e62-217977ca203a" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="cco_baead12d-f7f2-4b35-8dac-a4001a10cfe5"/>
+    <field name="active" eval="True"/>
+    <field name="name">CCO</field>
+    <field name="parent_id" ref="e_memo_approval_ef9e40b0-e3f1-4157-926b-b0d932b6e808"/>
+    <field name="sequence">4</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="e_memo_channel_0b733faf-f7de-4b7e-8806-ef712748305d" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="channel_d44b4c4b-0a17-4b63-8572-c46ee698080b"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [ref('base.group_erp_manager')])]"/>
+    <field name="name">Channel</field>
+    <field name="parent_id" ref="e_memo_49811739-90b5-449a-bc9a-cf22be6e459e"/>
+    <field name="sequence">1</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="e_memo_manager_c3b949a7-f9b5-48d5-bb4b-9da5267d2bcc" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="manager_45705405-b6ed-498a-92cc-eee02363abbf"/>
+    <field name="active" eval="True"/>
+    <field name="name">Manager</field>
+    <field name="parent_id" ref="e_memo_approval_ef9e40b0-e3f1-4157-926b-b0d932b6e808"/>
+    <field name="sequence" eval="False"/>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="e_memo_hod_136d24c5-59d7-4ddb-bb65-cfe62ec48458" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="hod_1dcbf8b9-49e7-46d5-a4cd-30679f16bd39"/>
+    <field name="active" eval="True"/>
+    <field name="name">HOD</field>
+    <field name="parent_id" ref="e_memo_approval_ef9e40b0-e3f1-4157-926b-b0d932b6e808"/>
+    <field name="sequence">1</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="e_memo_ceo_810cb32e-c50d-466c-a28a-2fb7aef30872" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="ceo_5b026803-f44a-45cb-b509-3d0eb2b09fec"/>
+    <field name="active" eval="True"/>
+    <field name="name">CEO</field>
+    <field name="parent_id" ref="e_memo_approval_ef9e40b0-e3f1-4157-926b-b0d932b6e808"/>
+    <field name="sequence">5</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="e_memo_memo_bf0e9cb9-e9fa-4d6d-b50b-84d909be381f" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="memo_ef0e82e7-5637-4be2-977a-f6b5580c0193"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Memo</field>
+    <field name="parent_id" ref="e_memo_49811739-90b5-449a-bc9a-cf22be6e459e"/>
+    <field name="sequence" eval="False"/>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="e_memo_risk_f4ad5b15-3502-44e8-85e0-63180eb72f5b" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="risk_f1a286bb-4a9b-4aa7-8c8d-9ab0af73a684"/>
+    <field name="active" eval="True"/>
+    <field name="name">Risk</field>
+    <field name="parent_id" ref="e_memo_approval_ef9e40b0-e3f1-4157-926b-b0d932b6e808"/>
+    <field name="sequence">12</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="e_memo_compliance_891884d5-f04a-4ff6-898f-30eacdb4aa45" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="compliance_8726ef79-ff70-4d6c-a6f9-cb2571d2ccba"/>
+    <field name="active" eval="True"/>
+    <field name="name">Compliance</field>
+    <field name="parent_id" ref="e_memo_approval_ef9e40b0-e3f1-4157-926b-b0d932b6e808"/>
+    <field name="sequence">11</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="e_memo_legal_a4268f90-1d9c-4cd1-95f3-049d26dec31f" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="legal_803b61ed-fc6a-43a1-9cf6-a08075da75b1"/>
+    <field name="active" eval="True"/>
+    <field name="name">Legal</field>
+    <field name="parent_id" ref="e_memo_approval_ef9e40b0-e3f1-4157-926b-b0d932b6e808"/>
+    <field name="sequence">10</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="e_memo_marketing_tea_4479eb2e-dfd8-4610-a2ed-91ad986ed9e8" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="marketing_team_1f016e99-6a74-488f-8bdf-93fccedc5127"/>
+    <field name="active" eval="True"/>
+    <field name="name">Marketing Team </field>
+    <field name="parent_id" ref="e_memo_approval_ef9e40b0-e3f1-4157-926b-b0d932b6e808"/>
+    <field name="sequence">9</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="e_memo_mancom_39e6e710-51b8-41ce-af4a-4abede6b0bfa" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="mancom_1eec3ca0-1d4f-4016-97e8-4462f139617e"/>
+    <field name="active" eval="True"/>
+    <field name="name">Mancom</field>
+    <field name="parent_id" ref="e_memo_approval_ef9e40b0-e3f1-4157-926b-b0d932b6e808"/>
+    <field name="sequence">8</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+</odoo>
