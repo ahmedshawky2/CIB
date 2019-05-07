@@ -17,6 +17,9 @@
         'views/ir_actions_server.xml',
         'views/ir_ui_menu.xml',
         'views/ir_model_access.xml',
+		'views/ir_ui_view_report.xml',
+        'views/ir_actions_report.xml'
+		
 
 
 

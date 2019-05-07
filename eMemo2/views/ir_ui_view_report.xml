@@ -1,0 +1,397 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="eMemo2.report_fd369c5f-9dc6-47b4-9a9d-4ccbe2d6df65" model="ir.ui.view" >
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <t t-name="studio_report">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="doc">
+            <t t-call="web.external_layout">
+              <div class="page"/>
+            </t>
+          </t>
+        </t>
+      </t>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key">eMemo2.report_fd369c5f-9dc6-47b4-9a9d-4ccbe2d6df65</field>
+    <field name="mode">primary</field>
+    <field name="model" eval="False"/>
+    <field name="name">eMemo2.report_fd369c5f-9dc6-47b4-9a9d-4ccbe2d6df65</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="eMemo2.odoo_studio_studio_c_85bff064-4236-4822-ae02-01b78a21d77a" model="ir.ui.view" >
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="/t/t/t/t/div" position="inside">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>Name:</strong>
+                <br/>
+              </span>
+              <span t-field="doc.x_name"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div/div[1]" position="attributes">
+          <attribute name="class" separator=" " add="col-5" remove="col-3"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div" position="before">
+          <div class="row">
+            <div class="col-6">
+              <span>New Column</span>
+            </div>
+            <div class="col-6">
+              <span>New Column</span>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[2]/div[1]/span[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[2]/div[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[1]/div[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[1]/div[1]" position="replace"/>
+        <xpath expr="/t/t/t/t/div/div[2]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>Name:</strong>
+                <br/>
+              </span>
+              <span t-field="doc.x_name"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[3]/div[1]/span[2]" position="attributes">
+          <attribute name="t-options-widget">"text"</attribute>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[3]/div[1]" position="attributes">
+          <attribute name="class" separator=" " add="col-12" remove="col-3"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[3]/div[1]" position="attributes">
+          <attribute name="class" separator=" " add="col-3" remove="col-12"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[3]/div[1]/span[1]" position="replace">
+          <span>
+            <span style="color: rgb(102, 102, 102); font-weight: 700;">Campaign Name</span>
+            <strong>:</strong>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[3]/div[1]/span[1]" position="replace">
+          <span>
+            <span style="color: rgb(102, 102, 102); font-weight: 700;">Campaign Name</span>
+            <strong>:</strong>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[3]" position="after">
+          <div class="row">
+            <div class="col-3"/>
+            <div class="col-3">
+              <span>
+                <strong>Status:</strong>
+                <br/>
+              </span>
+              <span t-field="doc.x_studio_status"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[4]/div[2]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[3]/div[1]" position="replace"/>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="eMemo2.report_fd369c5f-9dc6-47b4-9a9d-4ccbe2d6df65"/>
+    <field name="key">gen_key.733dbf</field>
+    <field name="mode">extension</field>
+    <field name="model" eval="False"/>
+    <field name="name">Odoo Studio: eMemo2.report_fd369c5f-9dc6-47b4-9a9d-4ccbe2d6df65 customization</field>
+    <field name="priority">99</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="eMemo2.report_ec15581d-9d18-455b-a6dd-b773cdfd599a" model="ir.ui.view" >
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <t t-name="studio_report">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="doc">
+            <t t-call="web.external_layout">
+              <div class="page"/>
+            </t>
+          </t>
+        </t>
+      </t>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key">eMemo2.report_ec15581d-9d18-455b-a6dd-b773cdfd599a</field>
+    <field name="mode">primary</field>
+    <field name="model" eval="False"/>
+    <field name="name">eMemo2.report_ec15581d-9d18-455b-a6dd-b773cdfd599a</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="eMemo2.odoo_studio_studio_c_01101584-e20f-403b-bf9c-e3a4cd17a19d" model="ir.ui.view" >
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="/t/t/t/t/div" position="inside">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>Name:</strong>
+                <br/>
+              </span>
+              <span t-field="doc.x_name"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div/div[2]" position="inside">
+          <span>
+            <strong>Campaign Start Date:</strong>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div/div[2]" position="inside">
+          <span t-field="doc.x_startdate"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div/div[3]" position="inside">
+          <span>
+            <strong>Campaign End Date:</strong>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div/div[3]" position="inside">
+          <span t-field="doc.x_enddate"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div/div[2]" position="attributes">
+          <attribute name="class" separator=" " add="offset-3"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div/div[1]/span[1]" position="replace">
+          <span>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div/div[1]/span[1]" position="replace">
+          <span>
+            <b>Campaign </b>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div/div[1]/span[1]" position="replace">
+          <span>
+            <b>Campaign Name</b>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div/div[2]/span[1]" position="replace">
+          <span>
+            <strong>Campaign Start Date</strong>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>Status:</strong>
+                <br/>
+              </span>
+              <span t-field="doc.x_studio_status"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[2]/div[2]" position="inside">
+          <span>
+            <strong>Budget:</strong>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[2]/div[2]" position="inside">
+          <span t-field="doc.x_studio_budget"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[2]/div[3]" position="inside">
+          <span>
+            <strong>ROI %:</strong>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[2]/div[3]" position="inside">
+          <span t-field="doc.x_roi"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[2]/div[4]" position="inside">
+          <span>
+            <strong>Cost to Income:</strong>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[2]/div[4]" position="inside">
+          <span t-field="doc.x_cost_to_income"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[2]/div[1]/span[1]" position="replace">
+          <span>
+            <b>Campaign Status</b>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[2]/div[2]/span[1]" position="replace">
+          <span>
+            <strong>Budget</strong>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[2]/div[3]/span[1]" position="replace">
+          <span>
+            <strong>ROI %</strong>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[2]/div[4]/span[1]" position="replace">
+          <span>
+            <strong>Cost to Income</strong>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[2]" position="attributes">
+          <attribute name="style" separator=";" add="margin-top:10px"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[2]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>Background:</strong>
+                <br/>
+              </span>
+              <span t-field="doc.x_studio_background"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[3]/div[1]/span[1]" position="replace">
+          <span>
+            <strong>Background</strong>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[3]" position="attributes">
+          <attribute name="style" separator=";" add="margin-top:10px"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[3]/div[1]" position="attributes">
+          <attribute name="class" separator=" " add="col-12" remove="col-3"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[3]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>Campaign Purpose:</strong>
+                <br/>
+              </span>
+              <span t-field="doc.x_studio_purpose"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[4]/div[1]/span[1]" position="replace">
+          <span>
+            <strong>Campaign Purpose</strong>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[4]/div[1]" position="attributes">
+          <attribute name="class" separator=" " add="col-12" remove="col-3"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[4]" position="attributes">
+          <attribute name="style" separator=";" add="margin-top:10px"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[4]" position="attributes">
+          <attribute name="class" separator=" " add="o_underline"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[4]" position="attributes">
+          <attribute name="class" separator=" " add="o_underline"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[4]" position="attributes">
+          <attribute name="class" separator=" " add="o_underline"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[4]/div[1]" position="attributes">
+          <attribute name="class" separator=" " add="o_underline"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[4]/div[1]" position="attributes">
+          <attribute name="class" separator=" " add="o_underline"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[4]/div[1]/span[2]" position="attributes">
+          <attribute name="class" separator=" " add="o_underline"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[4]/div[1]/span[2]" position="attributes">
+          <attribute name="class" separator=" " add="o_underline"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[4]/div[1]/span[2]" position="attributes">
+          <attribute name="class" separator=" " add="o_italic"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[4]/div[1]/span[2]" position="attributes">
+          <attribute name="class" separator=" " add="o_bold"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[4]/div[1]/span[2]" position="attributes">
+          <attribute name="class" separator=" " remove="o_underline"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[4]/div[1]/span[2]" position="attributes">
+          <attribute name="class" separator=" " remove="o_underline"/>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[4]/div[1]" position="replace"/>
+        <xpath expr="/t/t/t/t/div/div[4]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>Campaign Purpose:</strong>
+                <br/>
+              </span>
+              <span t-field="doc.x_studio_purpose"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[5]/div[1]" position="attributes">
+          <attribute name="class" separator=" " add="col-12" remove="col-3"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[5]/div[1]" position="attributes">
+          <attribute name="style" separator=";" add="margin-top:10px"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="eMemo2.report_ec15581d-9d18-455b-a6dd-b773cdfd599a"/>
+    <field name="key">gen_key.5b0247</field>
+    <field name="mode">extension</field>
+    <field name="model" eval="False"/>
+    <field name="name">Odoo Studio: eMemo2.report_ec15581d-9d18-455b-a6dd-b773cdfd599a customization</field>
+    <field name="priority">99</field>
+    <field name="type">qweb</field>
+  </record>
+</odoo>
