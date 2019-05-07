@@ -40,6 +40,8 @@
     <field name="arch" type="xml">
       <form>
         <header >
+          
+          <field name="x_studio_status" invisible="1" />
         <button string="Accept" type="object" name="approv" attrs="{'invisible':[('x_studio_status','in',['S1','S12','S13','S15','S18'])]}"  class="oe_highlight"/>
           <button string="Submit" type="object" name="approv" attrs="{'invisible':[('x_studio_status','not in',['S1','S12','S13','S15','S18'])]}" class="oe_highlight"/>
           <button string="Need More Info" type="object" name="moreinfo" attrs="{'invisible':[('x_studio_status','in',['S1','S13','S15','S18','S16','S17'])]}" class="oe_highlight"/>
