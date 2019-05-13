@@ -9,11 +9,10 @@
     <field name="filter" eval="False"/>
     <field name="groups_id" eval="[(6, 0, [])]"/>
     <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
-                        This is your new action ; by default, it contains a list view and a form view.
+                        NO Action Needed !
                     </p>
                     <p>
-                        You can start customizing these screens by clicking on the Studio icon on the
-                        top right corner (you can also customize this help message there).
+                        No Campaign waiting your Approval.
                     </p>
                 ]]></field>
     <field name="limit">80</field>
@@ -38,11 +37,10 @@
     <field name="filter" eval="False"/>
     <field name="groups_id" eval="[(6, 0, [])]"/>
     <field name="help"><![CDATA[<p class="o_view_nocontent_smiling_face">
-                        This is your new action ; by default, it contains a list view and a form view.
+                        No Campaign Found , press Create to create a new one
                     </p>
                     <p>
-                        You can start customizing these screens by clicking on the Studio icon on the
-                        top right corner (you can also customize this help message there).
+
                     </p>
                 ]]></field>
     <field name="limit">80</field>

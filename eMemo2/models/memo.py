@@ -261,9 +261,9 @@ class memo (models.Model):
         elif self.x_studio_status == "S8": #HOD Approval
             if (self.env.user.id not in HOD.users.ids):
                 raise ValidationError("Not Eligiable to take this Action")
-            if (self.x_studio_budget < 5000):
+            if (self.x_studio_budget < 5000000):
                 self.x_studio_status = "S11"
-            elif (self.x_studio_budget < 10000):
+            elif (self.x_studio_budget < 10000000):
                 self.x_studio_status = "S9"
             else:
                 self.x_studio_status = "S10"
